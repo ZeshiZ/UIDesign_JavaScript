@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Boisé Cents Acres - Sentiers</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li class="active active2"><a href="trails_fr.html">SENTIERS</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                            <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                            <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="blog_fr.html">BLOGUE</a></li>
+                    <li>RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="trails.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Sentiers et Aménagements</h1>
+    </section>
+
+    <!------- Trails Content ------>
+    <section class="trails">
+        <h1>Niveaux des sentiers à relever</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa molestias vero maxime ex hic veniam, id corrupti qui corporis. Corrupti ab obcaecati corporis aspernatur aut magni rem laudantium eum officiis.</p>
+    
+        <div class="row">
+            <div class="trail-col">
+                    <h3>Débutants</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, necessitatibus.</p>
+            </div>
+            <div class="trail-col">
+                    <h3>Intermédiaires</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nostrum!</p>
+            </div>
+            <div class="trail-col">
+                    <h3>Avancés</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------- Facilities ------------->
+    <section class="facilities">
+        <h1>Nos aménagements de renommée mondiale</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, error. Aspernatur quia voluptate magni necessitatibus voluptates totam et quasi mollitia animi corrupti vitae repellat impedit aperiam, quaerat nesciunt! Temporibus, eos.</p>
+    
+        <div class="row">
+            <a href="booking.html"><div class="facilities-col">
+                <img src="images/MicrosoftTeams-image.png" alt="Cabin">
+                <div class="layer">
+                    <h3>CABINS</h3>
+                </div></a>
+            </div>
+            <a href="contact.html"><div class="facilities-col">
+                <img src="images/KatZachWedding-LVIMAGERY-C-683.jpg" alt="Events">
+                <div class="layer">
+                    <h3>EVENT HALL</h3>
+                </div></a>
+            </div>
+            <div class="facilities-col">
+                <img src="images/569d028a1f00005000216147.jpeg" alt="Camping Grounds">
+                <div class="layer">
+                    <h3>CAMPSITES</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                    <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                    <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

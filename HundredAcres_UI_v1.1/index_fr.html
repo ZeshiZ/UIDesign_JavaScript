@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <script src="scripts/weather.js" defer></script>
+    <title>Le Boisé des Cents Acres</title>
+</head>
+
+<body class="main">
+    <!-- ----- Modal ---->
+    <!-- Modal 1 -->
+    <div class="modal hidden">
+        <div class="modal-header">
+            <button class="close-modal">&times;</button>
+            <h1>Saison de randonnée 2022</h1>
+            <p>
+                Abonnez-vous à notre newsletter pour obtenir toutes les informations.
+            </p>
+        </div>
+        <div>
+            <form action="" class="subscribe-container" id="modalForm">
+                <input type="text" class="subscribe-input" placeholder="Votre nom" required>
+                <input type="email" class="subscribe-input" placeholder="Votre adresse courriel" required>
+                <button type="submit" class="subscribe-input hero-btn" id="btnSubscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal2 hidden">
+        <div class="modal-header">
+            <button class="close-modal2">&times;</button>
+            <h1>Merci!</h1>
+            <p>
+                Merci pour votre abonnement à notre Newsletter. <br>
+                Un courriel de confirmation suivra sous peu.
+            </p>
+            <button type="submit" class="subscribe-input hero-btn" id="btnHome">Accueil</button>
+        </div>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay hidden"></div>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li class="active"><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li><a href="trails_fr.html">SENTIERS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                                <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                                <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog_fr.html">BLOGUE</a></li>
+                    <li class="active.reservation2">RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="index.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Les meilleures aventures sont celles partagées avec des amis</h1>
+            <p>
+                Les sentiers sont toujours plus agréables avec des amis. Venez découvrir un monde d'aventure sur l'un de
+                nos 50 sentiers, et plus encore! <br>
+                Soyez uni avec la nature dans nos aménagements de renommée mondiale. Que vouz soyez amateurs d'aventure
+                plein-air ou de vues à couper le souffle, le Boisé des Cents Acres en a pour tout les goûts.
+            </p>
+            <a href="contact.html" class="hero-btn">Commençez votre voyage</a>
+        </div>
+    </section>
+
+    <!-- Weather Info -->
+    <div class="card">
+        <div class="weather loading">
+            <h2 class="city">Weather in Montreal</h2>
+            <h1 class="temp">51°C</h1>
+            <div class="flex">
+                <img src="" alt="" class="icon" />
+                <div class="description">Cloudy</div>
+            </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind speed: 6.2 km/h</div>
+        </div>
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg></button>
+        </div>
+    </div>
+    </section>
+
+    <!------ TRAILS ------>
+    <section class="trails">
+        <h1>Les sentiers de randonnée</h1>
+        <p>Il n'est pas facile de s'éloignier des néons et de la frénésie de la ville. Si vous voulez vous accorder un
+            moment de répis, les sentiers du boisé sont la pour vous rafraîchir et vous revitailler. La randonnée est un
+            excellent moyen de profiter de la nature et redonner un rythme sain à votre vie. Émerveillez-vous avec des
+            paysages de montagnes époustouflantes et de chutes d'eau majestueuses, et ce, sans avoir à passer plusieurs
+            jours de voyage. Mais pour ceux et celles qui sont en vacances, nos amménagements de renommée mondiales sont
+            prêtes à vous acceuillir comfortablement.</p>
+
+        <div class="row">
+            <div class="trail-col">
+                <h3>Débutants</h3>
+                <p>&emsp;Convenables aux amateurs de tout niveau, les sentiers débutants possèdent une dénivellation de
+                    moins de 100 mètres et une distance totale de 10 kilomètres ou moins.<br>
+                    &emsp;Randonnée tranquille avec peu de risques; Souliers fermés et respirables recommendés.</p>
+            </div>
+            <div class="trail-col">
+                <h3>Intermédiaires</h3>
+                <p>&emsp;Les randonneur(euse)s en bonne forme physique qui veulent se donner un petit défi peuvent
+                    relever l'un des sentiers intermdiaires du boisé. Avec une dénivellation de 100 à 200 mètres et une
+                    distance totale d'au plus 20km, les randonneur(euse)s chevronné(e)s auront peu de difficultés sur
+                    ces sentiers.<br>
+                    &emsp;Terrain rocheux et parfois vaseux, il est impératif d'être alerte afin d'éviter les blessures
+                    et les accidents. Bottes de randonnée couvrant les chevilles très recommendés.​</p>
+            </div>
+            <div class="trail-col">
+                <h3>Avancés</h3>
+                <p>&emsp;Pour randonneur(euse)s exprérimenté(e)s, en excellente forme physique, seulement. Un bonne
+                    combinaison de dénivellations importantes et de longues distances font de ce niveau un défi
+                    difficile.<br>
+                    &emsp;Sentiers montagneux, certains comprenant de l'escalade nécessaire. Des cordes, rampes,
+                    échelles ou autres supports parfois présents pour aider le parcours.Équipements de randonnée et de
+                    sécurité obligatoire. ​</p>
+            </div>
+        </div>
+    </section>
+
+    <!------- Facilities ------->
+    <section class="facilities">
+        <h1>Nos aménagements de renommée mondiale</h1>
+        <p>Outre la randonnée, nous offrons également un service d'hébergement allant de terrains de camping simple ou
+            multiple, au chalet dans les bois, complètement aménagés.<br>
+            Vous avez un événement à organiser? Pas de souci, le dîner est servi! L'une de nos salles de réception 5
+            étoiles se ferait un plaisir de recevoir vos invités avec un service de restauration étoilé Michelin, une
+            fièrté locale..</p>
+
+        <div class="row">
+            <a href="booking.html">
+                <div class="facilities-col">
+                    <img src="images/MicrosoftTeams-image.png" alt="Cabin">
+                    <div class="layer">
+                        <h3>CHALETS</h3>
+                    </div>
+            </a>
+        </div>
+        <a href="contact.html">
+            <div class="facilities-col">
+                <img src="images/KatZachWedding-LVIMAGERY-C-683.jpg" alt="Events">
+                <div class="layer">
+                    <h3>SALLES DE RÉCEPTION</h3>
+                </div>
+        </a>
+        </div>
+        <a href="camp.html">
+            <div class="facilities-col">
+                <img src="images/569d028a1f00005000216147.jpeg" alt="Camping Grounds">
+                <div class="layer">
+                    <h3>TERRAINS DE CAMPING</h3>
+                </div>
+        </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- ----- TESTIMONIALS ----- -->
+    <section class="testimonials">
+        <h1>Guess Experiences</h1>
+        <p>Lisez ce que nos précieux clients ont à dire sur leurs expériences.</p>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="images/sharon.jpg" alt="">
+                <div>
+                    <p>It is more fun to talk to with someone who doesn't use long, difficult words but rather short,
+                        easy words like, 'What about lunch?'</p>
+                    <h3>Sharon Lee</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/takafumi.jpg" alt="">
+                <div>
+                    <p><span lang="jp">井の中の蛙、大海を知らず<br>口は災いの元<br>能ある鷹は爪を隠す</span></p>
+                    <h3>Takafumi Hayashi</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/zhzs.jpg" alt="">
+                <div>
+                    <p>One may stray from the path of a man, one may stray from the path of a woman, but there is no
+                        straying from the path of a human.</p>
+                    <h3>Zeshi Zhong</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------ Call to Action ----- -->
+    <section class="cta">
+        <h1>Débutez votre propre aventure inoubliable<br>au Boisé des Cents Acres</h1>
+        <a href="contact_fr.html" class="hero-btn">Nous Joindre</a>
+    </section>
+
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                    <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                    <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+    <!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="scripts/modal.js"></script>
+</body>
+
+</html>

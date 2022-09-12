@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">// jQuery library link</script>
+
+    <script src="scripts/form2.js"></script>
+    <title>Hundred Acre Woods - Détails de la réservation</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="trails.html">TRAILS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner.html">BEGINNER INFO</a></li>
+                                <li><a href="sneak_peak.html">SNEAK PEAK</a></li>
+                                <li><a href="virtual_hike.html">VIRTUAL HIKE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">POSTS</a></li>
+                    <li class="active active2">RESERVATION
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking.html">CABIN</a></li>
+                                <li><a href="camp.html">CAMPSITE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="reservation_2.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Réservation de chalets</h1>
+    </section>
+
+    <!---------------------- Reservations Page Content ------------------------->
+
+    <table class="form2">
+        <thead>
+            <tr>
+                <th colspan="2">Détails de la réservation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nom d'invité principal: </td>
+                <td id="primaryGuest_fr">John Smith</td>
+            </tr>
+            <tr>
+                <td>Adresse courriel: </td>
+                <td id="email_fr">john_smith@sample.com</td>
+            </tr>
+            <tr>
+                <td>Dates: </td>
+                <td id="date_fr">mm/dd/yyyy - mm/dd/yyyy</td>
+            </tr>
+            <tr>
+                <td>Type de chalet: </td>
+                <td id="cabin-type">Solo Cabin</td>
+            </tr>
+            <tr>
+                <td>Nombre  d'invité(s): </td>
+                <td id="cabin-guests_fr">1</td>
+            </tr>
+            <tr class="sub-total">
+                <td>Sous-total:</td>
+                <td id="sub-total">$ 0.00</td>
+            </tr>
+            <tr>
+                <td>Impôt:</td>
+                <td id="tax">$ 0.00</td>
+            </tr>
+            <tr class="total">
+                <td>Total:</td>
+                <td id="total">$ 0.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="form2-btns">
+        <a href="booking_fr.html">GO BACK</a>
+        <a href="#">PROCEED TO PAYMENT</a>
+    </div>
+<!-- -------------------------- Footer ---------------------------------->
+<hr>
+<section class="footer">
+    <div class="icons footer-col">
+        <h4>Follow Us</h4>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                <li><a href="#">Accessibilité</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+</section>
+
+<!-- ------------------ Javascript for Toggle Menu -------------------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        if(window.addEventListener) {
+            window.addEventListener("load", loadData, false);
+        } else if(window.attachEvent) {
+            window.attachEvent("onload", loadData)
+        }
+
+        function loadData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get("name_fr");
+            const email = urlParams.get("email_fr");
+            const from = urlParams.get("cabin-from-date_fr");
+            const to = urlParams.get("cabin-to-date_fr");
+            const type = urlParams.get("cabin-type");
+            const guests = urlParams.get("cabin-guests");
+
+            document.getElementById("primaryGuest_fr").innerHTML = name;
+            document.getElementById("email_fr").innerHTML = email;
+            document.getElementById("date_fr").innerHTML = from + " - " + to;
+            document.getElementById("cabin-type").innerHTML = type === "3" ? "Chalet familial" : type === "2" ? "Chalet couple": "Chalet simple";
+            document.getElementById("cabin-guests_fr").innerHTML = guests + " invité(s)";
+
+            const numberOfDays = datediff(parseDate(from), parseDate(to));
+            const rate = type === "3" ? 90 : type === "2" ? 70 : 50;
+            const subtotal = numberOfDays * rate;
+            const tax = subtotal * .15;
+            const total = subtotal + tax;
+
+            document.getElementById("sub-total").innerHTML = "$ " + subtotal.toFixed(2);
+            document.getElementById("tax").innerHTML = "$ " + tax.toFixed(2);
+            document.getElementById("total").innerHTML = "$ " + total.toFixed(2);
+        }
+
+        function parseDate(str) {
+            var mdy = str.split('-');
+            return new Date( mdy[0], mdy[1]-1, mdy[2]);
+        }
+
+        function datediff(first, second) {
+            return Math.round((second-first)/(1000*60*60*24));
+        }
+    </script>
+</div>
+</body>
+</html>

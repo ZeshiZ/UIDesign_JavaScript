@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <script src="scripts/reservation.js"></script>
+    <title>Boisé des Cents Acres - Chalets</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li><a href="trails_fr.html">SENTIERS</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                            <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                            <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="blog_fr.html">BLOGUE</a></li>
+                    <li class="active active2">RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="booking.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Réservation de chalets</h1>
+    </section>
+
+    <!---------------------- Reservations Page Content ------------------------->
+<div class="reservation">
+    <div class="row">
+        <div class="reservation-col">
+            <h2 class="heading">Taux de location</h2>
+            <hr>
+            <h3 class="heading-rates">Chalet simple</h3>
+            <p>$70 (Juin - Septembre)</p>
+            <p>$50 (Octobre - Mai)</p>
+            <h3 class="heading-rates">Chalet couple</h3>
+            <p>$90 (Juin - Septembre)</p>
+            <p>$70 (Octobre - Mai)</p>
+            <h3 class="heading-rates">Chalet familial</h3>
+            <p>$100 (Juin - Septembre)</p>
+            <p>$90 (Octobre - Mai)</p>
+            <hr>
+            <h3>Pour toutes questions:</h3>
+            <a href="contact_fr.html" class="hero-btn green-btn">Nous Joindre</a>
+        </div>
+        <div class="reservation-col">
+            <div class="reservation-box">
+                <h2>Réservation en ligne</h2>
+                <hr>
+                <div class="reservation-form">
+                    <form method="get" action="reservation_2_fr.html">
+                        <input type="text" name="name_fr" maxlength="50" placeholder="Votre nom *" required>
+                        <input type="email" name="email_fr" maxlength="50" placeholder="Votre addresse courriel *" required>
+                        <div class="date-container">
+                            <div class="date-group">
+                                <label>* de:</label>
+                                <input class="date-box" id="from-date" type="date" name="cabin-from-date_fr" required />
+                            </div>
+                            
+                            <div class="date-group">
+                                <label>* à:</label> 
+                                <input class="date-box" id="to-date" type="date" name="cabin-to-date_fr" required />
+                            </div>
+                        </div>
+                        <div class="checkbox-container">
+                            <p>* Type de chalet: </p>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="Solo" name="cabin-type" value="1" checked>
+                                <label for="Solo">Chalet simple</label><br>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="Two" name="cabin-type" value="2">
+                                <label for="Two">Chalet couple</label><br>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="Family" name="cabin-type" value="3">
+                                <label for="Family">Chalet familial - maximum 8 personnes.</label><br>
+                        </div>
+                        <p>* Nombre d'invité(s):
+                        <select name="cabin-guests" id="guests" required>
+                            <option value="1">1</option>
+                        </select></p>
+                        <div class="booking-btns">
+                            <button class="hero-btn green-btn" id="cabin-btn" onclick="fromDateCheck(), toDateCheck()">RÉSERVER</button>
+                        <input id="reset-btn" class="hero-btn green-btn" type="reset" value="RÉINITIALISER">
+                        </div>
+                        <p>* Champs Requis</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                    <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                    <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- ------------------ Javascript for Toggle Menu -------------------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</div>
+</body>
+</html>

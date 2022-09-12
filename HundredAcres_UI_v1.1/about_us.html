@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Hundred Acre Woods - About Us</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="active"><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="trails.html">TRAILS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner.html">BEGINNER INFO</a></li>
+                                <li><a href="sneak_peak.html">SNEAK PEAK</a></li>
+                                <li><a href="virtual_hike.html">VIRTUAL HIKE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">POSTS</a></li>
+                    <li>RESERVATION
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking.html">CABIN</a></li>
+                                <li><a href="camp.html">CAMPSITE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about_us_fr.html">FRANÇAIS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>About Us</h1>
+    </section>
+
+    <!------- Abou Us Content ------>
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We make adventures through the woods more fun.</h1>
+                <p>Hundred acre woods is home to a diverse collection of fawn and fauna. It is home to the friendliest bear, the bounciest tiger, the most caring piglet, and much more. We are happy to welcome you to the most fun filled, adventure laden place in the world.</p>
+                <p>We invisioned hundred acres to give our guest some of their happiest, fun filled, and memorable experience in nature.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis tempore, placeat animi tempora pariatur inventore quasi odio itaque porro, veritatis, suscipit est maxime rem illo non quae reiciendis officia error. Repudiandae ducimus architecto earum quaerat quo officiis consectetur minima optio. Beatae odio quia repellendus maxime, inventore sit. Explicabo, itaque!</p><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos commodi exercitationem quae dolorem ratione! Rem eveniet, itaque at est ad porro et perferendis magnam temporibus velit, aliquam, atque delectus mollitia dolore laudantium quis ipsum cum voluptates labore adipisci nisi? Cum illo libero obcaecati velit fugit pariatur voluptas ad eligendi similique!</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsum non, illo nobis facilis molestias rerum perferendis! Recusandae dolor sunt voluptatum, explicabo consequuntur doloremque laudantium quos libero harum labore suscipit id dolores dolore eum aliquam tenetur rerum praesentium, cum exercitationem asperiores natus, nemo illum quae. Expedita, sint odio, accusantium amet rerum, recusandae repellendus excepturi aperiam cum illo voluptas earum quae?
+                </p>
+            </div>
+            <div class="about-col">
+                <img src="images/winnie-the-pooh-3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Privacy Policy</a></li>
+                    <li><a href="terms_of_use.html">Terms of Use</a></li>
+                    <li><a href="terms_of_use.html#legal">Legal Notice</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

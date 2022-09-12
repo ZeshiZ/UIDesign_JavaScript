@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Boisé des Cents Acres - virtuel</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li class="active active2"><a href="trails_fr.html">SENTIERS</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                            <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                            <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="blog_fr.html">BLOGUE</a></li>
+                    <li>RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="virtual_hike.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Faites une randonnée virtuelle à travers le Boisé des Cents Acres</h1>
+    </section>
+
+    <!------- Trails Content ------>
+    <section class="trails">
+        <img src="images/winnie-and-friends2.png" alt="Winnie the pooh and his friends">
+        <p>Nous sommes bien au courant qu'en ces temps de pandémie, il est difficile de venir visiter le Boisé. Nous avons donc créé ce parcours virtuel afin que vous puissiez profiter des sentiers du confort de votre foyer.</p>
+        <div class="honeypot">
+            <h2>Le Sentier Pot-de-Miel</h2>
+            <div class="iframe-container2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q9CIyvv3hKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>Ce sentier est nommé Pot-de-Miel pour une raison! Le chemin d'un jaune appétissant qui constitue le sentier et qui nous guide à travers le Boisé est sûrement une coulée du de la nourriture des dieux, provenant d'un pot très familier. Un de nos sentiers favoris!</p>
+        </div>
+        <div class="piglets-walk">
+            <h2>La Marche de Porcinet</h2>
+            <div class="iframe-container2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6qxeqGEFDt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>Lorsque Porcinet a besoin de son temps personnel, c'est sur ce sentier qu'il se rend. Au fur et à mesure que l'on progresse sur le sentier, les touches de rouge accentué de jaune aide à rappeler à Porcinet son amitié avec Winnie l'Ourson.</p>
+        </div>
+        <div class="owls-flight">
+            <h2>Le Vol de Maître Hibou</h2>
+            <div class="iframe-container2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q1m27R0tAKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>Lorsque Maître Hibou a besoin de réfléchir, il prends son envol sur ce sentier. Les montées et les descentes qui ponctuent ce chemin ne posent aucun défi à oiseau majestueux tel Maître Hibou.</p>
+        </div>
+    </section>
+
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                    <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                    <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

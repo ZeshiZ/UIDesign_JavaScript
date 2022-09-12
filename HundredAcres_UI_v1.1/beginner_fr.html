@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Boisé des Cents Acres - débutants</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li class="active active2"><a href="trails_fr.html">SENTIERS</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                            <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                            <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="blog_fr.html">BLOGUE</a></li>
+                    <li class="active.reservation2">RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="beginner.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Conseils aux Débutants</h1>
+    </section>
+
+    <!------- Information Content ------>
+    <section class="information">
+        <h1>Avant de partir</h1>
+        <p>Cette video vous familiarise avec les techniques de base afin de vous préparer à votre première excursion. Non seulement allez-vous apprendre trucs et astuces, mais vous allez aussi avoir un aperçu de l'équipement nécessaire pour avoir une aventure agréable et sécuritaire.</p>
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/edElLWvSVLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2>Ce qu'il faut apporter:</h2>
+        <ul>
+            <li>Sac à dos de randonnée</li>
+            <li>Vêtements adaptés au climat</li>
+            <li>Souliers et/ou bottes de randonnée</li>
+            <li>Aliments nutritifs et énergisants</li>
+            <li>Beaucoup d'eau</li>
+            <li>Outils de navigation, tels une carte et une boussole</li>
+            <li>Trousse de premiers soins</li>
+            <li>Couteau-suisse</li>
+        </ul>
+    </section>
+
+    <!-------Hiking Trails-------------->
+    <section class="information">
+        <h1>Choisir son sentier</h1>
+        <p>Le Boisé des Cents Acres comporte une vingtaine de sentiers adaptés pour débutants, parmi lesquels vous pouvez choisir à votre goût.</p>
+        <div class="grid">
+            <article class="trail-pics grid-col-span3"><img src="images/trail6.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail5.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail4.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail3.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail2.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail1.jpg" alt=""></article>            
+        </div>
+    </section>
+    
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                    <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                    <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

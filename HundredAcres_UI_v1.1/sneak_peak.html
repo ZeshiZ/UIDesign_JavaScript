@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Hundred Acre Woods - Sneak Peak</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li class="active active2"><a href="trails.html">TRAILS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner.html">BEGINNER INFO</a></li>
+                                <li><a href="sneak_peak.html">SNEAK PEAK</a></li>
+                                <li><a href="virtual_hike.html">VIRTUAL HIKE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">POSTS</a></li>
+                    <li class="active.reservation2">RESERVATION
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking.html">CABIN</a></li>
+                                <li><a href="camp.html">CAMPSITE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="sneak_peak _fr.html">FRANÇAIS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>A Glance into the Forest</h1>
+    </section>
+
+    <!------- Trails Content ------>
+    <section class="trails">
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mmKT1aRNu5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="row">
+            <div class="trail-col">
+                    <h3>Cafe</h3>
+                    <img src="images/pooh-cafe.jpeg" alt="Winnie the pooh cafe" width="100%"></a>
+                    <p>&emsp;Relax and take a sip of coffee at our very own Winnie the Pooh cafe! We also have an extensive menu with all sorts of themed food items.</p>
+                    <img src="images/pooh-burger.jpg" alt="Winnie the pooh burger" width="100%"></a>
+                    <p>&emsp;We have something for everything. Our extensive menu offers a variety of options for people with food restrictions. We have gluten free, vegan, low sodium, halal options. Just ask our staff!</p>
+            </div>
+            <div class="trail-col">
+                    <h3>Giftshop</h3>
+                    <img src="images/pooh-giftshop.jpg" alt="Winnie the pooh giftshop" width="100%"></a>
+                    <p>&emsp;Welcome to our giftshop! We carry souvenirs for both adult and kids, from clothes to plushes and even kitchenware. We can gurantee that there is something for everyone.</p>
+                    <img src="images/pooh-giftshop2.jpg" alt="Winnie the pooh giftshop" width="100%"></a>
+                    <p>&emsp; Visit our giftshop located beside customer service center before the honeypot trail.</p>
+            </div>
+            <div class="trail-col">
+                    <h3>Themed Picnics</h3>
+                    <img src="images/pooh-picnic2.jpg" alt="Winnie the pooh picnic" width="100%"></a>
+                    <p>&emsp;Have you always wanted to have a picnic like Winnie the pooh and his friends? Well now you can! We have various picnic tables set up throughout our hiking area and at base camp for everyone to enjoy. </p>
+                    <img src="images/picnic.jpg" alt="Winnie the pooh picnic" width="100%"></a>
+                    <p>Each table is equiped with a table cloth and Winnie the pooh stuffed animals so you can really feel like you're having a picnic with Winnie and his friends!</p>
+        </div>
+    </section>
+
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Privacy Policy</a></li>
+                    <li><a href="terms_of_use.html">Terms of Use</a></li>
+                    <li><a href="terms_of_use.html#legal">Legal Notice</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

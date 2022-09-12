@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Hundred Acre Woods - Beginner Info</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li class="active active2"><a href="trails.html">TRAILS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner.html">BEGINNER INFO</a></li>
+                                <li><a href="sneak_peak.html">SNEAK PEAK</a></li>
+                                <li><a href="virtual_hike.html">VIRTUAL HIKE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">POSTS</a></li>
+                    <li>RESERVATION
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking.html">CABIN</a></li>
+                                <li><a href="camp.html">CAMPSITE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="beginner_fr.html">FRANÇAIS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Beginner</h1>
+    </section>
+
+    <!------- Information Content ------>
+    <section class="information">
+        <h1>Before you hike</h1>
+        <p>Watch this video to know basic skills before starting your first hike. Here you will see tips and tricks as well as equipments you will need to have an enjoyable and safe day hiking adventure.</p>
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/edElLWvSVLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2>What to bring:</h2>
+        <ul>
+            <li>Hiking backpack</li>
+            <li>Weather appropriate clothing</li>
+            <li>Hiking shoes or boots</li>
+            <li>Plenty of food</li>
+            <li>Plenty of water</li>
+            <li>Navigation tools such as a map and compass</li>
+            <li>First aid kit</li>
+            <li>Knife or multi-tool</li>
+        </ul>
+    </section>
+
+    <!-------Hiking Trails-------------->
+    <section class="information">
+        <h1>Hiking Trails</h1>
+        <p>Hundred acres has 20 beginner hiking trails you can choose from.</p>
+        <div class="grid">
+            <article class="trail-pics grid-col-span3"><img src="images/trail6.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail5.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail4.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail3.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail2.jpg" alt=""></article>
+            <article class="trail-pics"><img src="images/trail1.jpg" alt=""></article>            
+        </div>
+    </section>
+    
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Privacy Policy</a></li>
+                    <li><a href="terms_of_use.html">Terms of Use</a></li>
+                    <li><a href="terms_of_use.html#legal">Legal Notice</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

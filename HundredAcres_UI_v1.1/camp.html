@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <script src="scripts/reservation.js"></script>
+    <title>Hundred Acre Woods - Camp</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="trails.html">TRAILS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner.html">BEGINNER INFO</a></li>
+                                <li><a href="sneak_peak.html">SNEAK PEAK</a></li>
+                                <li><a href="virtual_hike.html">VIRTUAL HIKE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">POSTS</a></li>
+                    <li class="active active2">RESERVATION
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking.html">CABIN</a></li>
+                                <li><a href="camp.html">CAMPSITE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="camp_fr.html">FRANÇAIS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Campsite Reservations</h1>
+    </section>
+
+    <!---------------------- Campsite Reservations Page Content ------------------------->
+<div class="reservation">
+    <div class="row">
+        <div class="reservation-col">
+            <h2 class="heading">Camp Rates</h2>
+            <hr>
+            <table class="pricing">
+                <thead>
+                    <tr>
+                        <td>Capacity</td>
+                        <td>June-September</td>
+                        <td>October-May</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>One tent</td>
+                        <td>65$</td>
+                        <td>50$</td>
+                    </tr>
+                    <tr>
+                        <td>Two tents</td>
+                        <td>85$</td>
+                        <td>70$</td>
+                    </tr>
+                    <tr>
+                        <td>Three tents</td>
+                        <td>105$</td>
+                        <td>90$</td>
+                    </tr>
+                    <tr class="last-row">
+                        <td>Four tents</td>
+                        <td>125$</td>
+                        <td>110$</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2>Each Rental</h2>
+            <table class="includes">
+                <thead>
+                    <tr>
+                        <td colspan="2">Includes:</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Exclusive access to your site for the duration of your stay.</td>
+                        <td>Parking at the Entrance Office.</td>
+                    </tr>
+                    <tr>
+                        <td>The delivery of 1 bag of wood per night.</td>
+                        <td>1 tent campsite = 1 car<br>
+                            2 tent campsite = 2 cars<br>
+                            3 tent campsite = 3 cars<br>
+                            4 tent campsite = 4 cars</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>The park's map.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Access to park office outdoor and indoor showers, park hot water baths, and locker services.</td>
+                    </tr>
+                    <thead>
+                        <tr>
+                            <td colspan="2">Does not include:</td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Taxes</td>
+                        <td>Watercraft rental. You can book canoes/kayaks/SUP through our office during your stay.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <hr>
+            <h3>For inqueries:</h3>
+            <a href="contact.html" class="hero-btn green-btn">Contact Us</a>
+        </div>
+        <div class="reservation-col">
+            <div class="reservation-box">
+                <h2>Online Reservation</h2>
+                <hr>
+                <div class="reservation-form">
+                    <form method="get" action="reservation_camp.html">
+                        <input type="text" name="name" maxlength="50" placeholder="Enter your name *" required>
+                        <input type="email" name="email" maxlength="50" placeholder="Enter email address *" required>
+                        <div class="date-container">
+                            <div class="date-group">
+                                <label>* From:</label>
+                                <input class="date-box" id="from-date" type="date" name="cabin-from-date" required />
+                            </div>
+                           
+                            <div class="date-group">
+                                <label>* To:</label> 
+                                <input class="date-box" id="to-date" type="date" name="cabin-to-date" required />
+                            </div>
+                        </div>
+                        <div class="checkbox-container">
+                            <p>* Cabin-type: </p>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="1-tent" name="cabin-type" value="1" checked>
+                                <label for="Solo">1-tent</label><br>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="2-tents" name="cabin-type" value="2">
+                                <label for="Two">2-tents</label><br>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="3-tents" name="cabin-type" value="4">
+                                <label for="Family">3-tents</label><br>
+                                <input onchange="onCabinTypeChanged(this)" type="radio" id="4-tents" name="cabin-type" value="5">
+                                <label for="Family">4-tents</label><br>
+                        </div>
+                        <p>* Number of guest(s): 
+                            <select name="cabin-guests" id="guests" required>
+                                <option value="1">1</option>
+                            </select></p>
+                        <div class="booking-btns">
+                            <button class="hero-btn green-btn" id="cabin-btn" onclick="fromDateCheck(), toDateCheck()">SUBMIT</button>
+                        <input id="reset-btn" class="hero-btn green-btn" type="reset" value="RESET">
+                        </div>
+                        <p>* Required Fields</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------- Footer ---------------------------------->
+<hr>
+<section class="footer">
+    <div class="icons footer-col">
+        <h4>Follow Us</h4>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="terms_of_use.html#confidentiality">Privacy Policy</a></li>
+                <li><a href="terms_of_use.html">Terms of Use</a></li>
+                <li><a href="terms_of_use.html#legal">Legal Notice</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+</section>
+
+<!-- ------------------ Javascript for Toggle Menu -------------------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</div>
+</body>
+</html>

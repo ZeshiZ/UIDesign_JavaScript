@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <script src="scripts/weather.js" defer></script>
+    <title>Hundred Acre Woods</title>
+</head>
+
+<body class="main">
+    <!-- ----- Modal ---->
+    <!-- Modal 1 -->
+    <div class="modal hidden">
+        <div class="modal-header">
+            <button class="close-modal">&times;</button>
+            <h1>2022 hiking season</h1>
+            <p>
+                Subscribe to our newsletter to get all the information.
+            </p>
+        </div>
+        <div>
+            <form action="" class="subscribe-container" id="modalForm">
+                <input type="text" class="subscribe-input" placeholder="Enter Name" required>
+                <input type="email" class="subscribe-input" placeholder="Enter Email" required>
+                <button type="submit" class="subscribe-input hero-btn" id="btnSubscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal2 hidden">
+        <div class="modal-header">
+            <button class="close-modal2">&times;</button>
+            <h1>Thank you!</h1>
+            <p>
+                Thank you for subscribing to our newsletter. <br>
+                You shoud receive a confirmation email soon.
+            </p>
+            <button type="submit" class="subscribe-input hero-btn" id="btnHome">Home</button>
+        </div>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay hidden"></div>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="trails.html">TRAILS</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="beginner.html">BEGINNER INFO</a></li>
+                                <li><a href="sneak_peak.html">SNEAK PEAK</a></li>
+                                <li><a href="virtual_hike.html">VIRTUAL HIKE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">POSTS</a></li>
+                    <li>RESERVATION
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking.html">CABIN</a></li>
+                                <li><a href="camp.html">CAMPSITE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="index_fr.html">FRANÇAIS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Adventures are more fun with friends.</h1>
+            <p class="sub-title">
+                It's more fun to hike with friends. Discover a world of adventure with our more than 50 trails.<br>
+                Be one with nature with our world class facilities. Come and enjoy natures adventure or relax and enjoy
+                the views.
+            </p>
+            <a href="contact.html" class="hero-btn">Start your adventure</a>
+        </div>
+
+        <!-- Weather Info -->
+        <div class="card">
+            <div class="weather loading">
+                <h2 class="city">Weather in Montreal</h2>
+                <h1 class="temp">51°C</h1>
+                <div class="flex">
+                    <img src="" alt="" class="icon" />
+                    <div class="description">Cloudy</div>
+                </div>
+                <div class="humidity">Humidity: 60%</div>
+                <div class="wind">Wind speed: 6.2 km/h</div>
+            </div>
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg></button>
+            </div>
+        </div>
+    </section>
+
+    <!------- TRAILS ------>
+    <section class="trails">
+        <h1>Hiking Trails</h1>
+        <p class="sub-title">It's hard to fall out of love with the bright lights and good vibes of the city, but when
+            you feel like you need to take just the slightest of breaks, take a hike and refresh. Hiking allows you to
+            slow down and relax while getting outside to enjoy nature at a calmer pace. There are lots of majestic
+            waterfalls and stunning mountaintops to see, all taking as little time as day trips. And if you need the
+            rest before your drive back, enjoy our world class facilities too.</p>
+
+        <div class="row">
+            <div class="trail-col">
+                <h3>Beginner</h3>
+                <p>&emsp;Suitable for people of all ages who are in fair condition. Elevation gain of less than 100
+                    meters and less than 10km of distance total.<br>
+                    &emsp;Walking with a low chance of injury, light trekking shoes or approach shoes are okay for this
+                    level.</p>
+            </div>
+            <div class="trail-col">
+                <h3>Intermediate</h3>
+                <p>&emsp;Reasonably fit hikers who get out at least once a month should be able to do this level. This
+                    level would be considered easy for frequent hikers. Elevation gain of 100-200 meters and a maximum
+                    distance of 20km in a day.<br>
+                    &emsp;Mountain climbing, with the possibility of occasional use of the hands or chains or ropes to
+                    move up the route. Little potential danger is encountered. Ankle high hiking boots strongly
+                    recommended.​</p>
+            </div>
+            <div class="trail-col">
+                <h3>Experienced</h3>
+                <p>&emsp;Regular hiking experience is required to participate in hikes at this level. Elevation gain of
+                    more than 1,000 meters and potentially more than 15km distance in one day. Combination of
+                    significant elevation gain and long distance make this level a challenge for many.<br>
+                    &emsp;Scrambling with increased exposure. Handholds are necessary. Chains, ladders, and other aids
+                    may be in place on the route to navigate safely. Exposure is present, and falls could result in
+                    serious injury or death. ​</p>
+            </div>
+        </div>
+    </section>
+
+    <!------- Facilities ------->
+    <section class="facilities">
+        <h1>Our Worldclass Facilities</h1>
+        <p class="sub-title">Aside from hiking, we also offer a variety of services from quaint cabins in the middle of
+            the forest, minus the 7 dwarves and a witch with an apple. To multiple camp grounds dotted around the woods,
+            with a variety of options from single tent up to 5 tent camp grounds. Have an event coming up? Let down your
+            hair <em lang="fr">ma chère mademoiselle</em>. It is with deepest pride and greatest pleasure that we
+            welcome you. And now, we invite you to relax, let us pull up a chair, as the dining room proudly presents...
+            your dinner.</p>
+
+        <div class="row">
+            <a href="booking.html">
+                <div class="facilities-col">
+                    <img src="images/MicrosoftTeams-image.png" alt="Cabin">
+                    <div class="layer">
+                        <h3>CABINS</h3>
+                    </div>
+            </a>
+        </div>
+        <a href="contact.html">
+            <div class="facilities-col">
+                <img src="images/KatZachWedding-LVIMAGERY-C-683.jpg" alt="Events">
+                <div class="layer">
+                    <h3>EVENT HALL</h3>
+                </div>
+        </a>
+        </div>
+        <a href="camp.html">
+            <div class="facilities-col">
+                <img src="images/569d028a1f00005000216147.jpeg" alt="Camping Grounds">
+                <div class="layer">
+                    <h3>CAMPSITES</h3>
+                </div>
+        </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- ----- TESTIMONIALS ----- -->
+    <section class="testimonials">
+        <h1>Guest Experience</h1>
+        <p class="sub-title">Read what our valuable guess has to say about their experiences.</p>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="images/sharon.jpg" alt="">
+                <div>
+                    <p>It is more fun to talk to with someone who doesn't use long, difficult words but rather short,
+                        easy words like, 'What about lunch?'</p>
+                    <h3>Sharon Lee</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/takafumi.jpg" alt="">
+                <div>
+                    <p><span lang="jp">井の中の蛙、大海を知らず<br>口は災いの元<br>能ある鷹は爪を隠す</span></p>
+                    <h3>Takafumi Hayashi</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/zhzs.jpg" alt="">
+                <div>
+                    <p>One may stray from the path of a man, one may stray from the path of a woman, but there is no
+                        straying from the path of a human.</p>
+                    <h3>Zeshi Zhong</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------ Call to Action ----- -->
+    <section class="cta">
+        <h1>Start your own fun adventures<br>in the Hundred Acre Woods.</h1>
+        <a href="contact.html" class="hero-btn">Contact Us</a>
+    </section>
+
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Privacy Policy</a></li>
+                    <li><a href="terms_of_use.html">Terms of Use</a></li>
+                    <li><a href="terms_of_use.html#legal">Legal Notice</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+    <!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="scripts/modal.js"></script>
+</body>
+
+</html>

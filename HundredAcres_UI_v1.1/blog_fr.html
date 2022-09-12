@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Boisé Cents Acres - Blogue</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li><a href="trails_fr.html">SENTIERS</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                            <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                            <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li class="active"><a href="blog_fr.html">BLOGUE</a></li>
+                    <li>RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="blog.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Nouvelles et Événements</h1>
+    </section>
+
+    <!------- Blog Page Content ------>
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <!-- -------------- NEWS ---------------------------- -->
+                <h1><a id="news">Nouvelles</a></h1>
+                <hr>
+                <img src="images/flood.jpg" alt="">
+                <h2>Inondations dans certaines parties du boisé</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illum debitis, neque modi molestias assumenda maiores ex quasi optio vitae rem, veniam totam eius quidem. At accusamus, nesciunt officiis doloremque adipisci optio quidem quod ipsum, odio, harum maxime explicabo minima ab ducimus minus pariatur. Ipsa at itaque eaque accusamus ex quos excepturi libero, perferendis nemo voluptatum ipsam reiciendis! Cum, doloremque.</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ipsa eveniet tenetur ad delectus deleniti, vero exercitationem voluptatibus dolore eum nihil sunt accusamus natus impedit corrupti repudiandae? Mollitia repellendus, perspiciatis odio tempore aperiam porro sit corrupti quis similique beatae. Recusandae consectetur sit odio obcaecati eligendi velit accusantium nihil voluptas ad.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, optio blanditiis. Distinctio, veniam. Nemo, architecto iusto voluptate laudantium vel mollitia dignissimos minima delectus! Distinctio molestias minima voluptatibus sequi, suscipit, non aut quidem ea incidunt nobis nesciunt quis veritatis ratione laboriosam reprehenderit dolorem doloribus beatae pariatur. Qui consectetur, quas excepturi tempora nostrum assumenda facilis obcaecati optio quisquam! Distinctio mollitia delectus reiciendis.</p>
+            
+                <div class="comment-box">
+                    <h3>Laisser un commentaire</h3>
+                    <form action="" class="comment-form">
+                        <input type="text" placeholder="Votre nom">
+                        <input type="email" placeholder="Votre addresse courriel">
+                        <textarea rows="5" placeholder="votre commentaire..."></textarea>
+                        <button type="submit" class="hero-btn green-btn">Envoyer</button>
+                    </form>
+                </div>
+
+                <!-- -------------- NOTICES ---------------------------- -->
+                <h1><a id="notices">Alertes</a></h1>
+                <hr>
+                <img src="images/100-Acre-Woods-1.jpg" alt="">
+                <h2>Avis : Abeilles repérées près d'une des cabanes.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illum debitis, neque modi molestias assumenda maiores ex quasi optio vitae rem, veniam totam eius quidem. At accusamus, nesciunt officiis doloremque adipisci optio quidem quod ipsum, odio, harum maxime explicabo minima ab ducimus minus pariatur. Ipsa at itaque eaque accusamus ex quos excepturi libero, perferendis nemo voluptatum ipsam reiciendis! Cum, doloremque.</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ipsa eveniet tenetur ad delectus deleniti, vero exercitationem voluptatibus dolore eum nihil sunt accusamus natus impedit corrupti repudiandae? Mollitia repellendus, perspiciatis odio tempore aperiam porro sit corrupti quis similique beatae. Recusandae consectetur sit odio obcaecati eligendi velit accusantium nihil voluptas ad.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, optio blanditiis. Distinctio, veniam. Nemo, architecto iusto voluptate laudantium vel mollitia dignissimos minima delectus! Distinctio molestias minima voluptatibus sequi, suscipit, non aut quidem ea incidunt nobis nesciunt quis veritatis ratione laboriosam reprehenderit dolorem doloribus beatae pariatur. Qui consectetur, quas excepturi tempora nostrum assumenda facilis obcaecati optio quisquam! Distinctio mollitia delectus reiciendis.</p>
+            
+                <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form action="" class="comment-form">
+                        <input type="text" placeholder="Enter Name">
+                        <input type="email" placeholder="Enter Email">
+                        <textarea rows="5" placeholder="Your comment..."></textarea>
+                        <button type="submit" class="hero-btn green-btn">POST COMMENT</button>
+                    </form>
+                </div>
+
+                 <!-- -------------- EVENTS ---------------------------- -->
+                 <h1><a id="events">Evenements</a></h1>
+                 <hr>
+                <img src="images/wedding.jpg" alt="">
+                <h2>L'amour est l'aventure d'une vie - et le mariage n'est que la case Départ</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illum debitis, neque modi molestias assumenda maiores ex quasi optio vitae rem, veniam totam eius quidem. At accusamus, nesciunt officiis doloremque adipisci optio quidem quod ipsum, odio, harum maxime explicabo minima ab ducimus minus pariatur. Ipsa at itaque eaque accusamus ex quos excepturi libero, perferendis nemo voluptatum ipsam reiciendis! Cum, doloremque.</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ipsa eveniet tenetur ad delectus deleniti, vero exercitationem voluptatibus dolore eum nihil sunt accusamus natus impedit corrupti repudiandae? Mollitia repellendus, perspiciatis odio tempore aperiam porro sit corrupti quis similique beatae. Recusandae consectetur sit odio obcaecati eligendi velit accusantium nihil voluptas ad.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, optio blanditiis. Distinctio, veniam. Nemo, architecto iusto voluptate laudantium vel mollitia dignissimos minima delectus! Distinctio molestias minima voluptatibus sequi, suscipit, non aut quidem ea incidunt nobis nesciunt quis veritatis ratione laboriosam reprehenderit dolorem doloribus beatae pariatur. Qui consectetur, quas excepturi tempora nostrum assumenda facilis obcaecati optio quisquam! Distinctio mollitia delectus reiciendis.</p>
+            
+                <div class="comment-box">
+                    <h3>Laisser un commentaire</h3>
+                    <form action="" class="comment-form">
+                        <input type="text" placeholder="Votre nom">
+                        <input type="email" placeholder="Votre addresse courriel">
+                        <textarea rows="5" placeholder="votre commentaire..."></textarea>
+                        <button type="submit" class="hero-btn green-btn">Envoyer</button>
+                    </form>
+                </div>
+
+                <!-- -------------- BLOGS ---------------------------- -->
+                <h1><a id="blogs">Blogue</a></h1>
+                <hr>
+                <img src="images/hiking-stop.jpg" alt="">
+                <h2>Un arrêt de randonnée vers le futur.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illum debitis, neque modi molestias assumenda maiores ex quasi optio vitae rem, veniam totam eius quidem. At accusamus, nesciunt officiis doloremque adipisci optio quidem quod ipsum, odio, harum maxime explicabo minima ab ducimus minus pariatur. Ipsa at itaque eaque accusamus ex quos excepturi libero, perferendis nemo voluptatum ipsam reiciendis! Cum, doloremque.</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ipsa eveniet tenetur ad delectus deleniti, vero exercitationem voluptatibus dolore eum nihil sunt accusamus natus impedit corrupti repudiandae? Mollitia repellendus, perspiciatis odio tempore aperiam porro sit corrupti quis similique beatae. Recusandae consectetur sit odio obcaecati eligendi velit accusantium nihil voluptas ad.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, optio blanditiis. Distinctio, veniam. Nemo, architecto iusto voluptate laudantium vel mollitia dignissimos minima delectus! Distinctio molestias minima voluptatibus sequi, suscipit, non aut quidem ea incidunt nobis nesciunt quis veritatis ratione laboriosam reprehenderit dolorem doloribus beatae pariatur. Qui consectetur, quas excepturi tempora nostrum assumenda facilis obcaecati optio quisquam! Distinctio mollitia delectus reiciendis.</p>
+            
+                <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form action="" class="comment-form">
+                        <input type="text" placeholder="Enter Name">
+                        <input type="email" placeholder="Enter Email">
+                        <textarea rows="5" placeholder="Your comment..."></textarea>
+                        <button type="submit" class="hero-btn green-btn">POST COMMENT</button>
+                    </form>
+                </div>
+            </div>
+            <div class="blog-right">
+                <div class="sticky">
+                    <h3>Articles par Catégories</h3>
+                    <div>
+                        <span><a href="#news">Nouvelles</a></span>
+                        <span>15</span>
+                    </div>
+                    <div>
+                        <span><a href="#notices">Alertes</a></span>
+                        <span>20</span>
+                    </div>
+                    <div>
+                        <span><a href="#events">Événements</a></span>
+                        <span>6</span>
+                    </div>
+                    <div>
+                        <span><a href="#blogs">Blogue</a></span>
+                        <span>9</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span><a href="#top">Back to Top</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Privacy Policy</a></li>
+                    <li><a href="terms_of_use.html">Terms of Use</a></li>
+                    <li><a href="terms_of_use.html#legal">Legal Notice</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

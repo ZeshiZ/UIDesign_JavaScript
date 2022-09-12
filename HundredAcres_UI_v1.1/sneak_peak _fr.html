@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Supermercado+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon2.jpg">
+    <title>Boisé des Cents Acres - apercu</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/hundred acres-logos_white.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index_fr.html">ACCUEIL</a></li>
+                    <li><a href="about_us_fr.html">À PROPOS</a></li>
+                    <li class="active active2"><a href="trails_fr.html">SENTIERS</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="beginner_fr.html">INFOS POUR DÉBUTANTS</a></li>
+                            <li><a href="sneak_peak _fr.html">APERÇU</a></li>
+                            <li><a href="virtual_hike _fr.html">RANDONNÉE VIRTUELLE</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="blog_fr.html">BLOGUE</a></li>
+                    <li>RÉSERVATIONS
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="booking_fr.html">CHALETS</a></li>
+                                <li><a href="camp_fr.html">TERRAINS DE CAMPING</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact_fr.html">NOUS JOINDRE</a></li>
+                    <li><a href="sneak_peak.html">ENGLISH</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Un aperçu du boisé</h1>
+    </section>
+
+    <!------- Trails Content ------>
+    <section class="trails">
+        <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mmKT1aRNu5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="row">
+            <div class="trail-col">
+                    <h3>Café</h3>
+                    <img src="images/pooh-cafe.jpeg" alt="Winnie the pooh cafe" width="100%"></a>
+                    <p>&emsp;Venez prendre un café et vous détendre chez Winnie l'Ourson. Nous offrons également un menu complet thématique.
+                    <img src="images/pooh-burger.jpg" alt="Winnie the pooh burger" width="100%"></a>
+                    <p>&emsp;Nous en avons pour tout les goûts! Le menu complet a été assemblé avec toutes les restrictions alimentaires possibles en tête. Nous avons des options sans gluten, vegane, sans ou peu de sodium, halal, etc. Faites-nous part de vos demandes!</p>
+            </div>
+            <div class="trail-col">
+                    <h3>Boutique de souvenirs</h3>
+                    <img src="images/pooh-giftshop.jpg" alt="Winnie the pooh giftshop" width="100%"></a>
+                    <p>&emsp;Bienvenue dans notre boutique de souvenirs! Nous offrons des cadeaux qui plairont aux petits et grands, allant des vêtements au peluches en passant par les ustensiles de cuisine. Nous sommes confiants que vous y trouverez un trésor pour tous un chaqun.</p>
+                    <img src="images/pooh-giftshop2.jpg" alt="Winnie the pooh giftshop" width="100%"></a>
+                    <p>&emsp; Notre boutique de souvenirs est située près du service à la clientèle, devant le sentier Pot-de-Miel.</p>
+            </div>
+            <div class="trail-col">
+                    <h3>Themed Picnics</h3>
+                    <img src="images/pooh-picnic2.jpg" alt="Winnie the pooh picnic" width="100%"></a>
+                    <p>&emsp;Avez-vous toujours rêvé d'avoir un pique-nique comme Winnie l'Ourson et ses amis? Voici votre chance! Une multitude de tables de pique-nique sont présentes sur nos sentiers pour votre usage.</p>
+                    <img src="images/picnic.jpg" alt="Winnie the pooh picnic" width="100%"></a>
+                    <p>Chaque table est équipée d'une nappe ainsi que de peluches Winnie l'Ourson, afin que vous puissiez vraiment partager votre pique-nique avec Winnie et ses amis!</p>
+        </div>
+    </section>
+
+    <!-- -------- Footer ------------->
+    <hr>
+    <section class="footer">
+        <div class="icons footer-col">
+            <h4>Follow Us</h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <div class="bottom-links">
+                <ul>
+                    <li><a href="terms_of_use.html#confidentiality">Avis de Confidentialité</a></li>
+                    <li><a href="terms_of_use.html">Conditions d'utilisation</a></li>
+                    <li><a href="terms_of_use.html#legal">Notes Légales</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>Made with <i class="fa fa-heart"></i> by Team ZSTJ</p>
+    </section>
+
+<!-- -------Javascript for Toggle Menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
